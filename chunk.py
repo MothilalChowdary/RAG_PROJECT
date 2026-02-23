@@ -39,18 +39,23 @@ class ChunkerEmbedder:
 
         texts = [chunk.page_content for chunk in chunks]
 
-        print(f"[INFO] Generating embeddings for {len(texts)} chunks...")
         embeddings = self.model.encode(
             texts,
             batch_size=32,
-            show_progress_bar=True,
             convert_to_numpy=True,
             normalize_embeddings=True
-            )
+        )
 
-        print(f"[INFO] Embeddings shape: {embeddings.shape}")
+        records = []
 
-        return embeddings
+        for chunk, embedding in zip(chunks, embeddings):
+            records.append({
+                "text": chunk.page_content,
+                "embedding": embedding,
+                "metadata": chunk.metadata
+            })
+
+        return records
 
 
 if __name__ == "__main__":
