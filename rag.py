@@ -18,6 +18,7 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 qdrant_client = QdrantClient(
     url=QDRANT_URL,
     api_key=QDRANT_API,
+    timeout=60
 )
 
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")

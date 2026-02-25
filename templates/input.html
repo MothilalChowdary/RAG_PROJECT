@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat | RAG Intelligence</title>
+    <title>Chat | RAG Chatbot</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,16 +13,21 @@
     <div class="chat-wrapper">
         <header class="chat-header">
             <div class="header-info">
-                <h2>RAG Intelligence</h2>
+                <h2>RAG Chatbot</h2>
                 <p id="userStatus">Mode: Public Access</p>
             </div>
-            <a href="login.html" id="loginLink" class="auth-btn">Login</a>
+            <div class="header-actions">
+                <button id="clearBtn" class="action-btn" title="Clear Chat">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <a href="login.html" id="loginLink" class="auth-btn">Login</a>
+            </div>
         </header>
 
         <div id="chatContainer" class="chat-container">
             <!-- Messages will appear here -->
             <div class="chat-bubble assistant">
-                Hello! I am your RAG assistant. How can I help you today?
+                Hello! I am your RAG Chatbot. How can I help you today?
             </div>
         </div>
 

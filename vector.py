@@ -27,7 +27,8 @@ class QdrantVectorDB:
 
         self.client = QdrantClient(
             url=url,
-            api_key=api_key
+            api_key=api_key,
+            timeout=60
         )
         self._create_collection()
 
