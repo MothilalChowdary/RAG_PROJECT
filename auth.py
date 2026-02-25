@@ -1,7 +1,7 @@
 from jose import jwt, JWTError
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import os
 from dotenv import load_dotenv
 
@@ -28,7 +28,7 @@ def create_access_token(user: User, expires_minutes: int = ACCESS_TOKEN_EXPIRE_M
         "sub": user.username,
         "role": user.role
     }
-    expire = datetime.utcnow() + timedelta(minutes=expires_minutes)
+    expire = datetime.now(timezone.utc) + timedelta(minutes=expires_minutes)
     to_encode.update({"exp": expire})
     token = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return token

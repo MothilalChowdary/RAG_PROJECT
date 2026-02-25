@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | RAG Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>RAG Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username" required />
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" required />
+            </div>
+            <button type="submit" id="loginBtn">
+                <span id="loginText">Login</span>
+                <div id="loginLoader" class="loader hidden"></div>
+            </button>
+        </form>
+        <p id="loginError"></p>
+        <div class="auth-footer">
+            <a href="input.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

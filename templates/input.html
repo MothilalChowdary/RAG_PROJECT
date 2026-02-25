@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat | RAG Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="chat-wrapper">
+        <header class="chat-header">
+            <div class="header-info">
+                <h2>RAG Intelligence</h2>
+                <p id="userStatus">Mode: Public Access</p>
+            </div>
+            <a href="login.html" id="loginLink" class="auth-btn">Login</a>
+        </header>
+
+        <div id="chatContainer" class="chat-container">
+            <!-- Messages will appear here -->
+            <div class="chat-bubble assistant">
+                Hello! I am your RAG assistant. How can I help you today?
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-form">
+                <textarea id="query" placeholder="Type a message..." rows="1"></textarea>
+                <button id="askBtn">
+                    <i id="btnIcon" class="fas fa-paper-plane"></i>
+                    <div id="btnLoader" class="loader hidden"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
