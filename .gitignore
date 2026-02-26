@@ -6,7 +6,6 @@ env/
 # Ignore your private data
 data/
 *.pdf
-*.txt
 *.docx
 *.xlsx
 *.csv

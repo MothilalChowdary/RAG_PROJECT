@@ -1,4 +1,4 @@
-# Company RAG Chatbot with Role-Based Access Control
+# SecureDoc AI: RAG Chatbot with RBAC
 
 A Retrieval-Augmented Generation (RAG) chatbot. This application allows users to query company documents with responses generated based on their specific access roles (Admin, User, Public).
 
